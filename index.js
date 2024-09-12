@@ -130,11 +130,11 @@ app.get('/',(req,res)=>{
 
 
 
-const handleValidationErr(err)=>{
+const handleValidationErr=((err)=>{
     console.log("This was a validation error.Please follow rule");
     console.dir(err.message);
     return err;
-};
+});
 
 app.use((err,req,res,next)=>{
     console.log(err.name);
